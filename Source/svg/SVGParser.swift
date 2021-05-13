@@ -1397,7 +1397,8 @@ open class SVGParser {
             if currentEffect == nil && filterIn == "SourceAlpha" {
                 currentEffect = AlphaEffect(input: nil)
             } else if currentEffect == nil && filterIn != defaultSource {
-                throw SVGParserError.incorrectFilterEffectsOrder
+                // do nothing
+                // throw SVGParserError.incorrectFilterEffectsOrder
             }
             effects.removeValue(forKey: filterIn)
 
